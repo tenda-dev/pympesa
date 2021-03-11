@@ -26,7 +26,7 @@ class MpesaBase:
 
             **Args:**
 
-                - `env` (str): Current app environment. Options: sandbox, live.
+                - `env` (str): Current app environment. Options: sandbox, production.
 
                 - `app_key` (str): The app key obtained from the developer portal.
 

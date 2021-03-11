@@ -19,6 +19,7 @@ class MpesaExpress(MpesaBase):
 
     def stk_push(
         self,
+		till_number=None,
         business_shortcode=None,
         passcode=None,
         amount=None,
@@ -76,10 +77,10 @@ class MpesaExpress(MpesaBase):
             "BusinessShortCode": business_shortcode,
             "Password": encoded.decode("utf-8"),
             "Timestamp": time,
-            "TransactionType": "CustomerPayBillOnline",
+            "TransactionType": "CustomerBuyGoodsOnline",
             "Amount": amount,
             "PartyA": int(phone_number),
-            "PartyB": business_shortcode,
+            "PartyB": till_number,
             "PhoneNumber": int(phone_number),
             "CallBackURL": callback_url,
             "AccountReference": reference_code,
